@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Computadoras</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6nA/D6IjJ4bapFqjmeVdA2bB9PdP1eZ" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #3498db, #e74c3c);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000; /* Cambiado a negro */
+        }
+        form {
+            max-width: 400px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function redirectToPage() {
+            window.location.href = "altas.php"; // Cambia el nombre de la página según tu necesidad
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <form action="procesar_registro2.php" method="post">
+            <h2 class="mb-4">Registro de Computadoras</h2>
+
+            <div class="form-group">
+                <label for="procesador">Procesador:</label>
+                <input type="text" class="form-control" id="procesador" name="procesador" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ram">RAM:</label>
+                <input type="text" class="form-control" id="ram" name="ram" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gabinete">Gabinete:</label>
+                <input type="text" class="form-control" id="gabinete" name="gabinete" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
